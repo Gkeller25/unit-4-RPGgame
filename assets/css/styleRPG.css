@@ -1,0 +1,24 @@
+
+body{
+    font-size: 10pt;
+    min-height: 100%;
+    
+
+    background-image: url("../images/star-wars-wallpapers-hd-resolution-For-Desktop-Wallpaper.jpg");
+    
+    background-position: center 30%; 
+    background-repeat: no-repeat;
+    font-family: myFirstFont} 
+            @font-face {
+            font-family: myFirstFont;
+            src: url("../images/Starjedi.ttf");
+}
+img:hover{opacity: 0.3;}
+#mainContent{min-height: 100%;}
+#talk{font-size: 14pt;}
+footer{
+   
+    height: 70px;
+    margin-top: 25px;
+width: 100%;
+bottom:0;}

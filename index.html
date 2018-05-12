@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Star Wars RPG Game</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="assets/css/styleRPG.css" />
+
+    </head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-light navbar-light  mb-3">
+        <div class="navbar-brand">Welcome</div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://gkeller25.github.io/Bootstrap-Portfolio/portfolio.html">Portfolio</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    
+            <div class="container-fluid" id="mainContent">
+                <h1 class="display-3 text-warning text-center"><u>Star Wars RPG</u></h1>
+                
+                <div class="row p-3" id="first">
+                    <div class="col-6">
+                        <div class="text-center text-warning"><h1>Player</h1></div>
+<!--Selection Area-->  <div class="row">
+                            <div class="container justify-content-center d-flex flex-wrap" id="activePlayer">
+                                <div class="col-4 available" id="playerChewie">
+                                    <div class="card text-center">
+                                        <div class="card-header p-0" id="chewieFnSel">
+                                            <p class="p-0 m-0">Chewbacca</p>     
+                                        </div>
+
+                                        <button class="p-0 character" id="chewie-select">                                   
+                                            <img class="card-img" src="assets/images/Chewie.jpg" alt="Card image cap"> 
+                                        </button> 
+
+                                        <div class="card-footer p-0   player chewieHP" id="chewieHpSel">
+                                     
+                                         </div>
+                                    </div>
+                                </div>
+
+
+                        <div class="col-4 available" id="playerLuke">
+                            <div class="card text-center">
+                                <div class="card-header p-0" id="lukeFnSel">
+                                        <p class="p-0 m-0">Luke Skywalker</p>     
+                                </div>
+                                <button class="p-0 character" id="luke-select">        
+                                <img class="card-img" src="assets/images/Luke-Skywalker.jpg" alt="Card image cap">
+                                </button>      
+                                <div class="card-footer p-0  player lukeHP" id="lukeHpSel">
+                                       
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 available" id="playerYoda">
+                            <div class="card text-center">
+                                <div class="card-header p-0" id="yodaFnSel">
+                                        <p class="p-0 m-0">Yoda</p>  
+                                </div>
+                                <button class="p-0 character" id="yoda-select">   
+                                <img class="card-img" src="assets/images/Yoda.jpg" alt="Card image cap">
+                                </button>      
+                                <div class="card-footer p-0  player yodaHP" id="yodaHpSel">
+                                     
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-4 mt-3 available" id="playerDooku">
+                            <div class="card text-center">
+                                <div class="card-header p-0" id="dookuFnSel">
+                                        <p class="p-0 m-0">Count Dooku</p>  
+                                </div>
+                                <button class="p-0  character" id="dooku-select">        
+                                <img class="card-img" src="assets/images/Dooku.jpg" alt="Card image cap">
+                                </button>     
+                                <div class="card-footer p-0  player dookuHP" id="dookuHpSel">
+                                        
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-4 mt-3 available" id="playerVader">
+                            <div class="card text-center">
+                                <div class="card-header p-0" id="vaderFnSel">
+                                        <p class="p-0 m-0">Darth vader</p>  
+                                </div>
+                                <button class="p-0 character" id="vader-select">    
+                                <img class="card-img" src="assets/images/Vader.jpg" alt="Card image cap">
+                                </button>
+                                <div class="card-footer p-0  player vaderHP " id="vaderHpSel">
+                                       
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-4 mt-3 available" id="playerSidious">
+                            <div class="card text-center">
+                                <div class="card-header p-0" id="sidiousFnSel">
+                                        <p class="p-0 m-0">Darth Sidious</p>  
+                                </div>
+                                <button class="p-0 character" id="sidious-select">     
+                                <img class="card-img" src="assets/images/Palpatine.jpg" alt="Card image cap">
+                                </button>
+                                <div class="card-footer p-0  player sidiousHP" id="sidiousHpSel">
+                                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                <div class="col-6" id="second">
+                    <div><h1 class="text-center text-warning"> Enemies</h1></div>
+<!--Opponent Selection--> <div class="row">
+                    <div class="container justify-content-center d-flex flex-wrap" id="opponents">
+                            <div class="col-4 enemiesLight" id="defenderChewie" style="display:none">
+                                <div class="card defender bg-primary text-center">
+                                    <div class="card-header p-0" id="chewieFnOp">
+                                            <p class="p-0 m-0">Chewbacca</p>     
+                                    </div>  
+                                    <button class="p-0 opponent" id="chewie-opponent">
+                                    <img class="card-img" src="assets/images/Chewie2.jpg" alt="Card image cap">    
+                                    </button>
+                                    <div class="card-footer p-0  chewieHP" id="chewieHpOp">
+                                            
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 enemiesLight" id="defenderLuke" style="display:none">
+                                <div class="card defender bg-primary text-center">
+                                    <div class="card-header p-0" id="lukeFnOp">
+                                            <p class="p-0 m-0">Luke Skywalker</p>  
+                                    </div>
+                                    <button class="p-0 opponent" id="luke-opponent">      
+                                    <img class="card-img" src="assets/images/Luke-Skywalker2.jpg" alt="Card image cap">
+                                    </button>       
+                                    <div class="card-footer p-0  lukeHP" id="lukeHpOp">
+                                            
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 enemiesLight" id="defenderYoda" style="display:none">
+                                <div class="card defender bg-primary text-center">
+                                    <div class="card-header p-0" id="yodaFnOp">
+                                            <p class="p-0 m-0">Yoda</p>  
+                                    </div>
+                                    <button class="p-0 opponent" id="yoda-opponent"> 
+                                    <img class="card-img" src="assets/images/Yoda2.jpg" alt="Card image cap">
+                                    </button>      
+                                    <div class="card-footer p-0  yodaHP" id="yodaHpOp">
+                                           
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 enemiesDark" id="defenderDooku" style="display:none">
+                                <div class="card defender bg-danger text-center">
+                                    <div class="card-header p-0" id="dookuFnOp">
+                                            <p class="p-0 m-0">Count Dooku</p>  
+                                    </div>
+                                    <button class="p-0 opponent" id="dooku-opponent">      
+                                    <img class="card-img" src="assets/images/Dooku2.jpg" alt="Card image cap">
+                                    </button>      
+                                    <div class="card-footer p-0  dookuHP" id="dookuHpOp">
+                                            
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 enemiesDark" id="defenderVader" style="display:none">                                
+                                <div class="card defender bg-danger text-center">
+                                    <div class="card-header p-0" id="vaderFnOp">
+                                            <p class="p-0 m-0">Darth vader</p>  
+                                    </div>
+                                    <button class="p-0 opponent" id="vader-opponent">
+                                    <img class="card-img"  src="assets/images/Vader2.jpg" alt="Card image cap">
+                                    </button>
+                                    <div class="card-footer p-0  vaderHP" id="vaderHpOp">
+                                          
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 enemiesDark" id="defenderSidious" style="display:none">
+                                <div class="card defender bg-danger text-center">
+                                    <div class="card-header p-0" id="sidiousFnOp">
+                                            <p class="p-0 m-0">Darth Sidious</p>  
+                                    </div>
+                                    <button class="p-0 opponent" id="sidious-opponent">  
+                                    <img class="card-img" src="assets/images/Palpatine2.jpg" alt="Card image cap">
+                                    </button>
+                                    <div class="card-footer p-0  sidiousHP" id="sidiousHpOp">
+                                     
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row p-3" id="third">
+                <div class="col-2 offset-2 text-center">
+               
+                    <button type="button" class="btn btn-info" id="attack">ATTACK</button>            
+        </div>
+        <div class="col-4">
+        <p class="message m-0 p-0 text-warning font-weight-bold" id="talk"></p>
+    </div>
+            <div class="col-2 inset-2 text-center">
+                    <button type="button" class="btn btn-info" id="reset">Reset Game</button> 
+                                </div>
+        </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="text-center text-warning"><h1>Defender</h1>
+                            
+                        </div>
+                        
+<!--Defender-->
+                        <div class="container justify-content-center m-0 d-flex flex-row" id="chosenOpponent">
+                                
+                            <div class="col-4" id="defenderArea">
+                                
+                                            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row p-3">
+                                
+                        <div class="col-6 p-3">
+                                        
+                                    
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            
+          
+            <footer class=" fixed-bottom bg-light w-100 mt-3">
+                    <div class=" py-3 text-center">
+                        Copyright©
+                    </div>
+                </footer>
+            </div>
+         
+
+    <script src="assets/javascript/game.js"></script> 
+</body>
+
+</html>
